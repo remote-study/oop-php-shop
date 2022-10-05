@@ -14,7 +14,7 @@ class Product
         $this->title = $title;
     }
 
-    public static function find($id)
+    public static function find($id): Product
     {
         // How to load data:
         // $content = Product::getProducts('./data/products.json');
@@ -22,7 +22,7 @@ class Product
         // TODO: check if given product exists, if exists return as object else return false
     }
 
-    public static function getProducts($path)
+    public static function getProducts($path): array
     {
         $content = FileReader::readJsonFile($path, true);
 
